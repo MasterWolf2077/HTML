@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formatting Text and Organizing Data</h1>
+    <!-- The <strong> tag is used to make the enclosed text bold, The <em> tag is used to make the enclosed text italic,
+        The <u> tag is used to underline the enclosed text. -->
+    <h2>Bold, Italic and Underline</h2>        
+    <p>This is some <strong><u>important</u> <em>important</em></strong> text.</p>
+    
+    <!-- The <sup> tag is used to make the enclosed text superscript (slightly above the regular text). -->
+    <h2>Superscript</h2>
+    <p>1<sup>st</sup>, 2<sup>nd</sup>, and 3<sup>rd</sup></p>
+    
+    <!-- The <sub> tag is used to make the enclosed text subscript (slightly below the regular text). -->
+    <h2>Subscript</h2>
+    <p>The chemical formula for water is H<sub>2</sub>O.</p>
+   
+    <!-- The <del> tag is used to strike through text, indicating that it has been deleted or is no longer relevant. -->
+    <h2>Delete Text</h2>
+    <p>Special Price: <del>$100</del> $75.</p>
+    
+    <!-- The <mark> tag is used to highlight text with a background color, indicating that it is of special importance. -->
+    <h2>Highlight</h2>
+    <p>The deadline for submitting the report is <mark>Monday, March 12th</mark>.</p>
+    
+    <!-- The <q> tag is used for short, inline quotes (typically just a few words or a short phrase). -->
+    <h2>Short Inline Quotes</h2>
+    <p><q>The only way to do great work is to love what you do.</q> - Steve Jobs</p>
+    
+    <!-- The <blockquote> tag is used for longer, block quotes. -->
+    <h2>Longer Block Quotes</h2>
+    <p>As Albert Einstein once said:</p>
+<blockquote>
+  <p>"Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world. The true sign of intelligence is not knowledge but imagination."</p>
+</blockquote>
+<p>This quote speaks to the idea that creativity and original thinking are more important than simply accumulating knowledge. It suggests that being able to see beyond what is already known and to imagine new possibilities is a key characteristic of intelligence.</p>
+ 
+<!-- When you want to mark up the title or source of a book, film, song, or any other creative work,
+  provide attribution or credit for an idea or information, or indicate a reference to another source, you can use the <cite> element.-->
+<h2>Mark Up, Reference</h2>
+<p>I recently read <cite>The Great Gatsby</cite> by F. Scott Fitzgerald.</p>
+
+<!-- When using quotes, it's important to attribute the source of the quote, typically by providing a URL. One way to do this is with the <cite> attribute,
+     which you can use inside a <q> tag to specify the source of the quote.-->
+<h2>Cite attribute used in a q tag</h2>
+<p>As Steve Jobs once said, <q cite="https://www.brainyquote.com/quotes/steve_jobs_416096">Innovation distinguishes between a leader and a follower.</q></p>
+
+<!-- Another way to provide more context for a quotation is to use the <footer> tag, 
+    which is a semantic tag that helps search engines and screen readers understand the content of the page.-->
+<h2>Footer Tag</h2>
+<blockquote>
+<p>The more that you read, the more things you will know. The more that you learn, the more places you'll go.</p>
+<footer>- Dr. Seuss</footer>
+</blockquote>
+
+<!-- Line break-->
+ <h2>Line Break</h2>
+<p>This is the first line.<br>This is the second line.</p>
+
+<!-- Horizontal rules-->
+<h2>Horizontail Rules</h2>
+<p>This is some text above the line.</p>
+<hr>
+<p>This is some text below the line.</p>
+
+<!-- To display preformatted text like computer code, poetry, or song lyrics in HTML, you can use the <pre> tag. -->
+<h2>Preformatted Text</h2>
+<pre>Hello, World!
+What a sight to see,
+A vast and endless web,
+Connecting you and me.</pre>
+
+<!-- The <pre> tag preserves all white space characters and displays the text in a monospaced font,
+     which makes it particularly useful for displaying code examples.-->
+<h2>Pre Tag again</h2>
+<pre>&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;Welcome to my first HTML page.&lt;/p&gt;
+&lt;/body&gt;</pre>
+
+<!-- <kbd> for displaying keyboard input-->
+<h2>kbd Tag</h2>
+<kbd>Ctrl + C</kbd>
+<br>
+<h2>Samp Tag</h2>
+<samp>Invalid username or password.</samp> <!-- <samp> for displaying sample output. -->
+
+<!-- Unordered Lists-->
+ <h2>Unordered Lists</h2>
+ <ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+</ul>
+    
+<!-- Ordered Lists -->
+ <h2>Ordered Lists</h2>
+<ol>
+  <li>First item</li>
+  <li>Second item</li>
+  <li>Third item</li>
+</ol>
+
+<!-- Definition Lists-->
+ <h2>Dedinition Lists</h2>
+ <dl>
+  <dt>Term 1</dt>
+  <dd>Definition 1</dd>
+  <dt>Term 2</dt>
+  <dd>Definition 2</dd>
+  <dt>Term 3</dt>
+  <dd>Definition 3</dd>
+</dl>
+
+<!--Nested Lists, you can create a hierarchy of information, where sub-lists are indented to show they belong to a parent list item. -->
+<h2>Nested Lists</h2>
+<ul>
+  <li>First item</li>
+  <li>Second item
+    <ul>
+      <li>Sub-item 1</li>
+      <li>Sub-item 2</li>
+    </ul>
+  </li>
+  <li>Third item</li>
+</ul>
+
+<!--Nested lists can also be mixed, meaning you can have an ordered list within an unordered list or vice versa: -->
+<h2>Mixed Nested Lists</h2>
+<ul>
+  <li>First item</li>
+  <li>Second item
+    <ol>
+      <li>Sub-item 1</li>
+      <li>Sub-item 2</li>
+    </ol>
+  </li>
+  <li>Third item</li>
+</ul>
+
+<!--The <table> element defines the entire table, and the <tr> element defines a row within the table. The <td> element defines a cell within a row. -->
+<h2>Creating Basic Table</h2>    
+<table>
+  <tr>
+    <td>Row 1, Column 1</td>
+    <td>Row 1, Column 2</td>
+  </tr>
+  <tr>
+    <td>Row 2, Column 1</td>
+    <td>Row 2, Column 2</td>
+  </tr>
+</table>
+
+<!-- Adding Headers-->
+ <h2>Headers</h2>
+ <table>
+  <tr>
+    <th>Service</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Web design</td>
+    <td>$500</td>
+  </tr>
+  <tr>
+    <td>Graphic design</td>
+    <td>$300</td>
+  </tr>
+  <tr>
+    <td>Content writing</td>
+    <td>$200</td>
+  </tr>
+  <tr>
+    <td>Social media management</td>
+    <td>$150</td>
+  </tr>
+</table>
+
+<!--Merge two or more cells in a row or a column to create a larger cell that spans multiple rows or columns. -->
+<h2>Merge Cells</h2>
+<table>
+  <tr>
+    <th rowspan="2">Product</th>    <!--colspan attribute specifies how many columns a cell should span (merges cells horizontally) -->
+    <th colspan="2">Price</th>      <!-- rowspan attribute specifies how many rows a cell should span (merges cells vertically).-->
+  </tr>
+  <tr>
+    <th>Old</th>
+    <th>New</th>
+  </tr>
+  <tr>
+    <td>Product 1</td>
+    <td>$10.00</td>
+    <td>$12.00</td>
+  </tr>
+  <tr>
+    <td>Product 2</td>
+    <td>$15.00</td>
+    <td>$18.00</td>
+  </tr>
+</table>
+
+<!--The <caption> element is used to add a title or caption to an HTML table. -->
+<h2>Caption Element</h2>
+<table>
+  <caption>Product Prices</caption>     <!--MUST BE PLACED IMMEDIATELY AFTER THE OPENING TABLE TAG-->
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Product 1</td>
+    <td>$10.00</td>
+  </tr>
+  <tr>
+    <td>Product 2</td>
+    <td>$15.00</td>
+  </tr>
+</table>
+
+<!--Some of the most commonly used attributes include:
+
+border, which sets the border size of the table (deprecated in HTML 5, CSS should be used instead).
+cellspacing, which sets the space between cells in the table (deprecated in HTML 5, CSS should be used instead).
+cellpadding, which sets the space between the cell content and the cell border (deprecated in HTML 5, CSS should be used instead).
+width, which sets the width of the table (deprecated in HTML 5, CSS should be used instead).
+height, which sets the height of the table.
+align, which sets the horizontal alignment of the table (deprecated in HTML 5, CSS should be used instead).
+bgcolor, which sets the background color of the table (deprecated in HTML 5, CSS should be used instead). -->
+<h2>The table Tag and Its Attributes</h2>
+<table border="1" cellspacing="10" cellpadding="5" width="80%" height="200" align="center" bgcolor="#f2f2f2">
+  <tr>
+    <th>Product</th>
+    <th>Price</th>
+  </tr>
+  <tr>
+    <td>Product 1</td>
+    <td>$10.00</td>
+  </tr>
+  <tr>
+    <td>Product 2</td>
+    <td>$15.00</td>
+  </tr>
+</table>
+
+<!--summary attribute, which gives a summary of the table for users who use assistive technologies like screen readers. -->
+<h2>Other Table-Specific Attributes</h2>
+<table>
+  <caption>Monthly Sales</caption>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>January</td>
+      <td>$10,000</td>
+    </tr>
+    <tr>
+      <td>February</td>
+      <td>$12,000</td>
+    </tr>
+    <tr>
+      <td>March</td>
+      <td>$15,000</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Total</td>
+      <td>$37,000</td>
+    </tr>
+  </tfoot>
+  <summary>This table shows the monthly sales figures for the first quarter of the year.</summary>
+</table>
+
+<!--It's important to note that some older attributes like border, cellpadding, and cellspacing are now deprecated in HTML5, so it's recommended to use CSS instead.-->
+
+</body>
+</html>
