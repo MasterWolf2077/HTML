@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>HTML Styling Layout - Part 1</h1>
+
+    <h2>Inline Styling and the style Attribute</h2>
+    <!--Inline styling is a method of applying CSS styles directly to individual HTML elements using the style attribute.-->
+    <element style="property: value;"></element>
+    <h3>Here's an example showing how to use the style attribute for adding styles directly inside a p tag (paragraph) element:</h3>
+    <!--<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <p>Here is a normal paragraph.</p>
+        <p style="background-color: blue; color: white; font-weight: bold;">
+        This paragraph has inline styling applied to it.
+        </p>
+        <p>Another normal paragraph.</p>
+    </body>
+</html>-->
+
+    <h2>The style Element and the Internal Stylesheet</h2>
+    <!--An internal stylesheet consists of CSS rules that you put inside a <style> element in the HTML document.
+     This method lets you style several HTML elements at once, avoiding the need to repeat styling for each individual element.-->
+     <!--You should place the <style> element in the <head> section of your HTML document. The CSS rules inside this
+         <style> element will then apply to matching elements in the <body> of your document based on the selectors you use.
+
+    Selectors are the part of CSS rules that identify which HTML elements to apply the styling to. Selectors can identify
+     elements based on their tag name, class, ID, attributes, and more. For example, if you want to apply a certain color
+      to all the paragraphs on your page, you can use the p selector to target all <p> elements.
+
+    Here's what the internal stylesheet syntax looks like:
+
+    <style>
+        /* CSS rules */
+            selector {
+                property: value;
+      /* more properties and values */
+    }
+    </style>
+
+    Each CSS rule includes a selector and one or more declarations (property-value pairs) inside curly braces ({ and }).-->
+
+    <!--<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        color: orange;
+      }
+      
+      p {
+        font-size: 18px;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is Heading 1</h1>
+    <p>This is an example of using an internal stylesheet with the style element. By defining CSS rules in the style element, we can apply consistent styling across the entire page without repeating the code for each element.</p>
+  </body>
+</html>
+
+
+In this internal stylesheet, there are two CSS rules:
+
+the first sets the color of the h1 element to orange;
+the second changes the font size and color of paragraph elements to 18px and blue, respectively.-->
+
+<br>
+<h1>HTML Styling and Layout – Part 2</h1>
+
+<h2>Colors and Color Formats in HTML</h2>
+<!--Colors can be applied to HTML elements using the CSS color property or the background-color property.-->
+<!--
+    <!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            h1 {
+                color: #FFFFFF;
+                background-color: green;
+            }
+
+            p {
+                color: RGB(0, 0, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>This is a heading</h1>
+        <p>This is a paragraph.</p>
+    </body>
+</html>
+-->
+
+<h2>Font Properties</h2>
+<!--Font properties are an essential aspect of web design, as they help to define the appearance and readability of your text. -->
+<p style="font-family: monospace; font-size: 20px; font-weight: 900; font-style: normal;">
+This is a paragraph of text.</p>
+
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            p {
+                font-family: monospace;
+                font-size: 20px;
+                font-weight: 900;
+                font-style: normal;
+            }
+        </style>
+    </head>
+    <body>
+        <p>This is a paragraph of text.</p>
+    </body>
+</html>-->
+
+<h1>HTML Styling and Layout – Part 3</h1>
+
+<h2>The span Element</h2>
+<!--The <span> element is an inline element that can be used to apply
+ styles to specific parts of a text or a small group of inline elements. -->
+ <p>This is a <span style="color: green;">sample text</span> with some inline styling.</p>
+
+<h2>The div Element</h2>
+<!--The <div> element is a block-level element that is used to create a container
+for other HTML elements. It is commonly used to group together a set of elements 
+and apply styles to them as a whole.-->
+<div style="border: 1px solid black; padding: 10px;">
+  <img src="/uploads/media/default/0001/04/rect1.png" alt="Image 1">
+  <img src="/uploads/media/default/0001/04/rect2.png" alt="Image 2">
+  <img src="/uploads/media/default/0001/04/rect3.png" alt="Image 3">
+</div>
+
+<h2>When to Use span and div</h2>
+<!--While the <span> and <div> elements are non-semantic and should not be used to convey
+ any meaning on their own, they can be useful in certain situations:
+
+1. Use <span> when you want to apply styles to a specific portion of text or a small group
+    of inline elements. -->
+    <p>This is a <span style="color: blue;">blue</span> text.</p>
+<!--2. Use <div> when you want to group together a set of elements and apply styles to them as a whole. -->
+    <div>
+<button>Button 1</button>
+<button>Button 2</button>
+</div>
+</body>
+</html>

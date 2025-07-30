@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Images</h1>
+
+    <h2>img Tag and Attributes</h2>
+    <img src="/uploads/media/default/0001/03/mountain_landscape.jpg" alt="Mountain landscape" width="340" height="250">
+
+    <h2>Image Location</h2>
+    <h3>Relative Path</h3>      <!--A relative path is a path that starts from the directory of the HTML file. For example: -->
+    <img src="images/picture.jpg" alt="A picture">
+
+    <h3>Absolute Path</h3>      <!--An absolute path is a path that starts from the root directory of the website. For example: -->
+    <img src="https://example.com/images/picture.jpg" alt="A picture">
+
+    <h2>Responsive Images: the srcset and sizes Attributes</h2>
+    <!--The srcset attribute allows you to specify a list of image files with different resolutions, sizes, and formats. -->
+    <!--The sizes attribute specifies the size of the image container in which the image will be displayed. In other words, 
+    it tells the browser how much screen space the image will occupy on different devices. -->
+    <!--By using srcset and sizes together, you can create images that are optimized for different devices and screen sizes. -->
+    <img src=sunflowers.jpg"
+     alt="Sunflowers in the sunset"
+     srcset="sunflowers-small.jpg 480w,     
+             sunflowers-medium.jpg 800w,
+             sunflowers-large.jpg 1200w"
+     sizes="(max-width: 480px) 95vw,
+            (max-width: 800px) 45vw,
+            30vw">
+
+    <h2>Other Image-Specific Attributes: border, hspace, vspace, and align</h2>
+    <h3>The border Attribute</h3>   <!--The border attribute specifies the width of the border around the image.  -->
+    <img src="example.jpg" alt="Example image" border="2">
+    <h3>The hspace and vspace Attributes</h3>   <!--The hspace and vspace attributes specify the horizontal and vertical space around the image, respectively.  -->
+    <img src="example.jpg" alt="Example image" hspace="10" vspace="10">
+    <h3>The align Attribute</h3>    <!--The align attribute allows for specifying the alignment of an image relative to surrounding content, with values like left, right, and center.  -->
+    <img src="example.jpg" alt="Example image" align="left">
+<br>
+    <h1>Hyperlinks</h1>
+
+    <h2>The a Tag and the href Attribute</h2>
+    <a href="https://www.example.com/">Visit our website</a>
+
+    <h2>Internal Links</h2> <!--The <a> tag primarily relies on the href attribute, which specifies the destination of the link. -->
+    <a href="https://example.com/page.html">Link to Page</a>    <!--the full address of the page (absolute URL). -->
+    <a href="/page.html">Link to Page</a>   <!--the relative URL which only includes the path to the page,
+     and creates a link to the page.html file in the same directory as the current page. -->
+
+    <h2>Anchor Links</h2>
+    <!--To create a link like this, you’re going to need the id attribute and the # symbol. Here’s how to do it:
+
+1.Add the id attribute to an HTML element on the page that you want to link to. For example, if you want to link to
+ an <h2> element with the content “Section 1”, you can do the following: <h2 id="section-1">Section 1</h2>.
+2.Then, create a link that points to this anchor by adding the # symbol followed by the id to the href attribute
+ of an <a> tag, like this: <a href="#section-1">Go to Section 1</a>. -->
+
+    <h2>External Links</h2>     <!--To create an external link, you need to specify the full URL of the page, website,
+                                 or resource that you want to link to.  -->
+    <a href="https://example.com">Visit Example.com</a>
+    <a href="https://www.example.com" target="_blank">Visit Example Website</a>     <!--It's important to note that because external links take users away from your website, 
+                                                                                you should ensure that they open in a new window or tab using the target attribute.  -->
+    <!--The target="_blank" attribute will open the linked page in a new tab or window, allowing users to easily return to your website. 
+    The target="_self" attribute will open the link in the same window. -->
+
+    <h2>Email links</h2>    <!--To create an email link, you can use the mailto protocol followed by the email address that you want to link to. -->
+    <a href="mailto:info@example.com">Email Us</a>
+
+    <h2>Telephone links</h2>    <!--Similarly, to create a telephone link, you can use the tel protocol followed by the telephone number that you want to link to.  -->
+    <a href="tel:123-456-7890">Call us at 123-456-7890</a>
+
+    <h2>The download Attribute</h2>     <!--The download attribute specifies that the target of the link should be downloaded rather than navigated to.
+     The attribute value can be used as the default filename that the downloaded file will be saved as. -->
+    <a href="https://example.com/document.pdf" download="my-document.pdf">Download my document</a>
+
+    <h2>The rel Attribute</h2>  <!--The rel attribute specifies the relationship between the current document and the target document. It can be used to indicate
+     that the target document is a stylesheet, a parent document, or a part of a series, among other things. -->
+    <a href="https://example.com/stylesheet.css" rel="stylesheet">Link to stylesheet</a>
+
+    <h2>The title Attribute</h2>    <!--The title attribute provides additional information about an element, enhancing the user's understanding and interaction with web content.
+
+The attribute offers supplementary details about the hyperlink's destination or purpose. This information typically appears as a tooltip, a small pop-up box,
+ when the user hovers their mouse over the link, giving users a preview of what to expect before clicking. -->
+    <p>Go to <a href="https://example.com/about" title="Visit our About section.">our website</a> for more information.</p>
+
+    <h2>Turning Elements into Links</h2>    <!--To make an element clickable, you simply need to wrap the <a> tag around it. The href attribute within this tag defines the URL to which the link points.
+
+This method works with a wide range of elements, including images, blocks of text, and even complex HTML structures like divs or sections. -->
+    <a href="https://www.example.com">
+    <img src="/uploads/media/default/0001/03/mountain_landscape.jpg" alt="Mountain landscape" width="340" height="250">
+</a>
+
+<br>
+    <h1>Media</h1>
+
+    <h2>Video and Audio Elements</h2>
+    <!--HTML provides the <video> and <audio> elements for embedding these types of media in a web page.
+
+    The elements support several attributes, such as:
+
+    src for specifying the URL of the media file,
+    controls for displaying built-in media controls,
+    width and height for specifying the dimensions of the player,
+    autoplay for automatically playing the media when the page loads,
+    loop for looping playback, and
+    preload for buffering the media file. -->
+    <video src="myvideo.mp4" controls autoplay>
+    Your browser does not support the video tag.
+    </video>    <!--For example, the following code embeds a video with built-in media controls
+         and automatic playback when the page loads: -->
+
+    <h2>Ensuring Cross-Browser Compatibility</h2>
+    <!--It's important to note that different browsers support different video and audio codecs,
+     which can impact the compatibility of media content across various devices.
+
+    To ensure cross-browser compatibility, it's recommended to provide multiple formats of the same media file, 
+    such as MP4 and WebM for video, and MP3 and Ogg for audio. This can be achieved using the <source> element within the <video> and <audio> elements. -->
+    <!-- Video Example -->
+<video controls>
+   <source src="myvideo.mp4" type="video/mp4">
+   <source src="myvideo.webm" type="video/webm">
+   <p>Your browser does not support the video tag.</p>
+</video>
+
+<!-- Audio Example -->
+<audio controls>
+   <source src="myaudiofile.mp3" type="audio/mp3">
+   <source src="myaudiofile.ogg" type="audio/ogg">
+   <p>Your browser does not support the audio tag.</p>
+</audio>
+
+<h2>Responsive Videos</h2>    
+<!--To create a responsive video using HTML, you can use the <video> element with the poster and controls attributes,
+     and the <source> element with the media atribute.
+
+The poster attribute specifies an image that will be displayed when the video is not playing, while the media attribute 
+located within the <source> element specifies a maximum width for the video to be displayed. This allows the video to adapt to different screen sizes. -->
+<video poster="web-dev-picture.jpg" controls>
+  <source src="web-dev-video.mp4" type="video/mp4" media="(max-width: 600px)">
+  <source src="web-dev-video.webm" type="video/webm">
+</video>
+
+<h1>Essentials of HTML Forms</h1>
+
+<h2>The form Element</h2>
+<!--The <form> element typically includes:
+
+the action attribute, which specifies the URL of the server-side script or endpoint that will process the form data.
+ The action attribute is added to the <form> element. When the form is submitted, the browser will send the form data to the specified URL.
+the method attribute, which specifies the HTTP method (GET or POST) used when sending form data to the server.
+ The method attribute is added to the <form> element and its value is set to either "GET" or "POST".-->
+<form action="submit-form.php" method="POST">
+  <!-- Form elements/fields go here -->
+</form>
+
+<h2>The input Element</h2>  <!--The <input> element is used to create different types of input fields used to collect user data. 
+                            It can be configured to accept various types of data, such as text, passwords, numbers, and emails, 
+                            among others, through the use of the type attribute.-->
+<!--
+    The Type Attribute
+The type attribute defines the functionality and input control displayed to the user, enabling specific data formats and validations for each field. In other words, it determines the type of input field and provides built-in validation functionality to ensure the input matches the desired format criteria.
+
+Common input types (the type attribute values) include:
+
+text – a single-line text input field, used for short text inputs such as names, email addresses, etc.
+email – a single-line text input field used specifically for entering and validating email addresses (the browser applies built-in validation to ensure that the user’s input is in the proper email format)
+url – a single-line text input field used specifically for entering, validating, and accepting only properly-formatted URLs;
+number – a single-line input field used specifically to validate and accept only numbers;
+password – a single-line text input field that masks the entered characters to maintain the confidentiality of the password;
+checkbox – a checkbox that can be toggled on or off, allows users to select one or more options from a list;
+radio – a radio button that belongs to a group of radio buttons (only one can be selected at a time)
+submit – a button that submits the form data and sends it to the server as specified by the action and method attributes;
+reset – a button that clears the form data and resets it to the initial values.
+For example, setting type="text" creates a field for textual input, while type="email" expects an email address, including built-in validation to ensure the input matches email format criteria.
+-->
+<br>
+<!--
+    The Name Attribute
+Each input field must have a name attribute.
+
+The name attribute is essential for identifying each piece of data submitted. It acts as a key for the form data,
+ allowing the server-side script to access and process user inputs based on these names.
+-->
+ <br>
+<!--
+    The Required Attribute
+Adding the required attribute to an input field makes it mandatory for users to fill out that field before submitting
+ the form. It's a simple way to ensure that critical information is not omitted.
+-->
+ <br>
+ <h2>The label Element</h2>
+ <!--It provides a textual description for each input field, improving form readability and usability.
+
+By associating a label with a specific input field using the for attribute (which should match the input's id attribute), 
+users can click on the label to focus on the corresponding input, a feature particularly beneficial for those using assistive technologies.-->
+<label for="email">Email:</label>
+<input type="email" id="email" name="useremail" required>
+<!--Here's what happens in our code:
+
+1.<label for="email">Email:</label> creates a label for the input field. The for attribute of the label is set to "email,"
+ which means this label is associated with an input element whose id attribute is "email." The text "Email:" is displayed
+  to the user next to the input field, indicating what information is expected in the associated input field.
+2.<input type="email" id="email" name="useremail" required> defines an input field designed to receive an email address:
+    type="email" specifies that the input should be an email address. Modern browsers will check if the entered text is
+     in the format of an email address (e.g., user@example.com) and prompt the user if it is not.
+    id="email" assigns an identifier to the input field, linking it with the label through the for attribute. This enhances accessibility, as clicking on the label will focus the input field.
+    name="useremail" names the data entered into this field as "useremail," which is used to identify the form data on the server side once submitted.
+    required marks the field as mandatory, meaning the form cannot be submitted without an email address entered in this field-->
+<br>
+<h1>Forms – Beyond the Basics</h1>
+
+<h2>The Textarea Element</h2>   <!--The <textarea> element creates a multi-line text input field, which allows users to
+                                enter larger amounts of text. You can set the rows and cols attributes to control the visible size of the textarea.-->
+<label for="message">Message:</label>
+<textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+<h2>The Select Element</h2>
+<!--he <select> element creates a dropdown list, used with <option> elements to define the available options.
+     You can use the multiple attribute to allow multiple selections, and the size attribute to control the number of visible options.-->
+<label for="pasta">Pasta:</label>
+<select id="pasta" name="pasta">
+  <option value="spaghetti">Spaghetti</option>
+  <option value="penne">Penne</option>
+  <option value="lasagna">Lasagna</option>
+  <option value="farfalle">Farfalle</option>
+</select>
+
+<h2>The Button Element</h2>
+<!--he <button> button element creates a clickable button that can be customized with JavaScript or used to submit or
+     reset a form, depending on its type attribute (e.g., submit, reset, or button). If the type attribute is omitted or set 
+     to "button", it does not have any default behavior and can be controlled with JavaScript.-->
+<button type="button" onclick="alert('Hello, World!')">Click me!</button>   <!--The onclick attribute is a JavaScript event handler that specifies the action to be performed
+ when the button is clicked. In this case, the action is an alert() function call, which displays the pop-up dialog message we've mentioned above.-->
+
+<h2>The Fieldset Element</h2>
+<!--The <fieldset> element creates a container used to group together related form elements. It can be helpful in
+     organizing complex forms with multiple sections. The <legend> element can be used within a <fieldset> to provide a caption or title for the group.-->
+ <fieldset>
+  <legend>Shipping Address</legend>
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address">
+  <br>
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city">
+  <br>
+  <label for="zip-code">ZIP Code:</label>
+  <input type="text" id="zip-code" name="zip-code">
+</fieldset>
+
+<h2>The Value Attribute</h2>
+<!--The value attribute specifies the initial value of the input field. When the form is loaded, this value will be pre-filled in the input field.-->
+<label for="first-name">First Name:</label>
+<input type="text" id="first-name" name="first-name" value="John">
+
+<h2>The Placeholder Attribute</h2>
+<!--The placeholder attribute specifies a hint that describes the expected value of the input field. 
+It does not specify the initial value itself, as in the case of the value attribute. The placeholder text is
+ displayed in the input field when it is empty and disappears when the user starts typing.-->
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" placeholder="name@example.com">
+
+<h2>The Disabled Attribute</h2>
+<!--The disabled attribute disables the input field, making it uneditable and unselectable. -->
+<label for="username">Username:</label>
+<input type="text" id="username" name="username" value="JohnDoe" disabled>
+
+<h2>The Readonly Attribute</h2>
+<!--The readonly attribute makes the input field read-only, allowing users to view the content but not edit it.
+ Unlike disabled fields, read-only fields are still selectable and send their values when the form is submitted. 
+ This attribute is useful when you want to display information to users that they should not edit but still include when submitting the form data.-->
+<label for="user-id">User ID:</label>
+<input type="text" id="user-id" name="user-id" value="CPI123456789" readonly>
+
+<h2>The Maxlength Attribute</h2>
+<!--maxlength limits the number of characters that can be entered into a text input field.-->
+<input type="text" name="username" maxlength="20">
+
+<h2>The Min and Max Attributes</h2>
+<!--min and max set the minimum and maximum values that can be entered into number, range, date, and time input fields.-->
+<input type="number" name="age" min="18" max="100">
+
+<h2>The Autocomplete Attribute</h2>
+<!--autocomplete – controls whether the browser should automatically complete input fields with previously entered data.
+ This attribute can have values of "on" (default), "off", or "new-password" (to disable autocomplete for password fields). -->
+<input type="text" name="address" autocomplete="off">
+
+<h2>The Pattern Attribute</h2>
+<!--pattern specifies a regular expression that the input value must match in order to be valid. This attribute is useful
+ for enforcing specific formatting or data validation rules. -->
+<input type="text" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+
+</body>
+</html>
