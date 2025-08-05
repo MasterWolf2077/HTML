@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding Structured Data to Web Page</title>
+</head>
+<body>
+    <div class="vcard">
+        <p class="fn">Gourmet Bistro</p>
+        <p class="org">The Gourmet Group</p>
+        <p class="tel">555-0202</p>
+        <a class="email" href="contact@gourmetbistro.com">Email</a>
+        <p class="adr">
+            <span class="street address">51 Jump street</span><br>
+            <span class="locality">Cape Town Region</span><br>
+            <span class="postal-code">6300</span>
+        </p>
+    </div>
+    <div itemscope itemtype="http://schema.org/Restaurant">
+        <span itemprop="name">Gourmet Bistro</span><br>
+        <p itemprop="description">A premier destination for fine dining in the city.</p>
+        <span itemprop="telephone">+1555-0202</span><br>
+        <a itemprop="email" href="mailto:contact@gourmetbistro.com">Email us</a>
+    </div>
+</body>
+</html>
